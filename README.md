@@ -12,6 +12,11 @@ npm run dev
 # View it in the browser at http://localhost:5173/
 ```
 
+## Development versus a production build
+
+- `npm run dev` starts a local development server with hot reloading and on-the-fly compilation so you can see changes instantly while coding.
+- `npm run build` creates an optimized production bundle (and prerendered pages if configured) ready to deploy.
+
 ## How to build a static version
 
 1. Though not strictly required, we can add a file to src/routes to stop prerendering and server side rendering
