@@ -14,7 +14,18 @@ npm run dev
 
 ## How to build a static version
 
-1. We need to add a file to src/routes to stop prerendering and server side rendering
+1. Though not strictly required, we can add a file to src/routes to stop prerendering and server side rendering
+
+This
+
+- Prevents SSR warnings
+- Ensures your build behaves the same as production
+- Avoids surprises later
+
+**prerender** = true tells SvelteKit to generate a static HTML version of the page at build time so it can be hosted without a server.
+**ssr** = false disables server-side rendering, meaning the page runs entirely in the browser like a client-side app.
+
+It will ensure we aren't accidentally using something only available on the server.
 
 +layout.ts
 
