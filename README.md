@@ -160,3 +160,10 @@ A link to the page should appear after a short while https://abitofcode.github.i
 However: Still got gotcherd.
 
 We Added a post build step but **DID NOT** run the build again, so the .nojekyll file never got added to the docs folder. Looking at the console in the browser shows a lot of 404 errors as the \_app folder has not been output by Jekyll.
+
+```sh
+npm run build
+git add -A
+git commit -m"Static build generated"
+git push
+```
