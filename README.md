@@ -145,6 +145,18 @@ git commit -m"Initial commit"
 
 In Github create a new repo
 
-```
+`contactsheet`
 
 ```
+git remote add origin git@github.com:abitofcode/contactsheet.git
+git branch -M main
+git push -u origin main
+```
+
+Go to Settings > Pages > Branch (main) > Folder (/docs) > Save
+
+A link to the page should appear after a short while https://abitofcode.github.io/contactsheet/
+
+However: Still got gotcherd.
+
+We Added a post build step but **DID NOT** run the build again, so the .nojekyll file never got added to the docs folder. Looking at the console in the browser shows a lot of 404 errors as the \_app folder has not been output by Jekyll.
